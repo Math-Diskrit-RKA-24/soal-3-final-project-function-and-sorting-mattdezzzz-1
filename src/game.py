@@ -30,7 +30,7 @@ def removePlayer(name):
             PlayerList.remove(player)
             print(f"{player['name']} Disqualified")
             return
-    print("There is no player with that name!")
+        print("There is no player with that name!")
 
 
 def setPlayer(player, key, value):
