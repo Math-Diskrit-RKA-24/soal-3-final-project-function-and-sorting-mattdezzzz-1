@@ -56,8 +56,11 @@ def attackPlayer(attacker, target):
     # mengkalkulasi health yang tersisa setelah serangan
     new_health = max(target["health"] - attacker_damage, 0)
 
+    # mengkalkulasi score penyerang
+    attacker_score = round(attacker["score"] + 1 - 1 / target["defensePower"] if target['defense'] else 1, 2)
+
     # mengupdate score penyerang
-    setPlayer(attacker, "score", attacker["score"] + (0.8 if target["defense"] else 1))
+    setPlayer(attacker, "score", attacker_score)
 
     # mengupdate health target dan defense target
     setPlayer(target, "health", new_health)
