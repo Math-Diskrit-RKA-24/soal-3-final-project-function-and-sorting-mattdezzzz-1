@@ -15,7 +15,6 @@ def createNewPlayer(name, damage=0, defensePower=0):
         defense=False,
     )
 
-
 def addPlayer(player):
     global PlayerList
     # menambahkan pemain ke variabel global PlayerList
@@ -30,7 +29,7 @@ def removePlayer(name):
             PlayerList.remove(player)
             print(f"{player['name']} Disqualified")
             return
-        print("There is no player with that name!")
+    print("There is no player with that name!")
 
 
 def setPlayer(player, key, value):
